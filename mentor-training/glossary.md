@@ -86,7 +86,7 @@ A person who guides Interns as they tackle their Assigned Issue by giving those 
 
 A person participating in the CodeDay Labs program. 
 
-{: .highlight-title }
+{: .note-title }
 >🤓
 >
 > The decision to refer to participants as “Intern” and not “Student” is an intentional one, so we request you do the same in your communications.
@@ -120,7 +120,7 @@ Consulting Software Engineers are a resource available to Interns to help with t
 
 Interns can schedule a CSE meeting at any time (even after their cohort has ended) by clicking the “Book Coding Help Meeting” in their dashboard.    
 
-{: .highlight-title }
+{: .note-title }
 > 🤓
 >
 > The decision to refer to CSEs as “Consulting Software Engineer” and not “TA” is an intentional one, so we request you do the same in your communications.
