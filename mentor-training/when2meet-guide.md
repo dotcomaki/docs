@@ -37,8 +37,6 @@ After creating the event, enter your availability right away so mentees see a pa
 6. Your availability saves automatically, there is no submit button.
 
 {: .note-title }
-> 💡
->
 > Mark only times you can genuinely commit to every week, not just this week. Leave a 15-30 min buffer before and after other commitments.
 
 ## 3. Sharing the Link with Mentees
@@ -51,8 +49,6 @@ Once your availability is entered, share the unique URL with your team.
 - Copy the full URL and paste it into your email introduction thread response.
 
 {: .note-title }
-> 💡
->
 > Send a friendly follow-up if someone hasn't responded after 24 hours. Remind mentees that When2Meet requires no account, just their name.
 
 ## 4. Reading the Results
@@ -75,8 +71,6 @@ As mentees fill in their availability, the grid updates in real time.
 2. Aim for a slot where **ALL team members overlap** (confirm with the hover tooltip).
 
 {: .note-title }
-> 💡
->
 > **No full overlap?** If no single slot works for everyone, prioritize times with the most mentees available. Reach out to mentees with blockers to see if any flexibility exists or email your CodeDay Labs point of contact if scheduling cannot be resolved.
 
 ## 5. Confirming the Meeting Time
@@ -94,12 +88,14 @@ Schedules change. Here's how to handle common scenarios:
 
 ### Updating your own availability
 
+(This is only possible if you set a password for your When2Meet)
 - Go back to your original When2Meet link (bookmark it!).
-- Enter your name and password (if you set one) to edit your entry.
+- Enter your name and password to edit your entry.
 - Click and drag to add or remove time blocks.
 
 ### Handling one-off cancellations
 
-- Give at least **24 hours notice** in the Slack channel for any cancelled session.
+- Give at least **24 hours notice** in the Slack channel as well as your CodeDay Labs point of contact for any cancelled session.
 - Offer an **async alternative** (e.g. a written Slack update) when cancelling.
+- Suggest meeting with a CSE if the interns want to meet.
 - Avoid cancelling more than once in any two-week period. Consistency matters to mentees.
