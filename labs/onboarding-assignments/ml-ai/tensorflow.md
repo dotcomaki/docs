@@ -1,13 +1,13 @@
 ---
-parent: Machine Learning & AI
+parent: Machine Learning and AI
 layout: minimal
 ---
-# PyTorch
+# Tensorflow (Machine Learning)
 
-Follow the "introduction to pytorch" tutorial series through "save and load the model" — [https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) — then submit a link to you code (Github, Pastebin, or a notebook)
+Complete the Tensorflow "quickstart for beginners" and submit your code (link to notebook or Github/Pastebin) [https://www.tensorflow.org/tutorials/quickstart/beginner](https://www.tensorflow.org/tutorials/quickstart/beginner)
 
 {: .note-title}
-> 🎓 **What if I already know PyTorch?**
+> 🎓 **What if I already know Tensorflow?**
 > 
 > Please pick assignments for aspects of your tech stack which you don't already know.
 > 
@@ -15,7 +15,7 @@ Follow the "introduction to pytorch" tutorial series through "save and load the 
 
 
 {: .note-title}
-> ❓ **What if I need help with PyTorch?**
+> ❓ **What if I need help using Tensorflow?**
 > 
 > 
 > You can ask for help in #ask-for-help or schedule a CSE session.

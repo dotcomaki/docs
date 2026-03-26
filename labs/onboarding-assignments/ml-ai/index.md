@@ -1,4 +1,4 @@
 ---
 parent: Onboarding Week Assignments
 ---
-# Machine Learning & AI
+# Machine Learning and AI
