@@ -97,7 +97,4 @@ Schedules change. Here's how to handle common scenarios:
 
 ### Handling one-off cancellations
 
-- Give at least **24 hours notice** in the Slack channel as well as your CodeDay Labs point of contact for any cancelled session.
-- Offer an **async alternative** (e.g. a written Slack update) when cancelling.
-- Suggest meeting with a CSE if the interns want to meet.
-- Avoid cancelling more than once in any two-week period. Consistency matters to mentees.
+This is covered in detail [here](./scheduling.md).
