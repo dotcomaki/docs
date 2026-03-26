@@ -1,0 +1,85 @@
+<style>
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.15);
+  color: inherit;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+.theme-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+  transform: scale(1.1);
+}
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+</style>
+<script>
+(function() {
+  var saved = localStorage.getItem('theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'codeday-dark' || (!saved && prefersDark)) {
+    var link = document.querySelector('link[rel="stylesheet"]');
+    if (link) {
+      link.href = link.href.replace(/just-the-docs-[^.]+/, 'just-the-docs-codeday-dark');
+      window.scrollTo(0, 0);
+      document.addEventListener('DOMContentLoaded', function() { window.scrollTo(0, 0); });
+    }
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var sunSvg = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  var moonSvg = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+  var btn = document.createElement('button');
+  btn.className = 'theme-toggle';
+  btn.setAttribute('aria-label', 'Toggle dark mode');
+  document.body.appendChild(btn);
+
+  function setTheme(theme) {
+    var link = document.querySelector('link[rel="stylesheet"]');
+    if (link) link.setAttribute('href', link.getAttribute('href').replace(/just-the-docs-[^.]+/, 'just-the-docs-' + theme));
+  }
+  function isDark() {
+    var saved = localStorage.getItem('theme');
+    return saved === 'codeday-dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+  function updateBtn() {
+    var dark = isDark();
+    btn.innerHTML = dark ? sunSvg : moonSvg;
+    var logo = document.querySelector('.site-logo');
+    if (logo) logo.style.backgroundImage = dark ? 'url("/assets/logo-text/white.svg")' : 'url("/assets/logo-text/color.svg")';
+  }
+  btn.addEventListener('click', function() {
+    var toDark = !isDark();
+    var newTheme = toDark ? 'codeday-dark' : 'codeday-light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateBtn();
+  });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      setTheme(e.matches ? 'codeday-dark' : 'codeday-light');
+      updateBtn();
+    }
+  });
+  updateBtn();
+});
+</script>

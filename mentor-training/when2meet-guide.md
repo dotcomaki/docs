@@ -17,7 +17,7 @@ This guide walks you through the entire process - from creating a poll to confir
 Follow these steps to set up a new availability poll for your team.
 
 1. **Go to [when2meet.com](https://www.when2meet.com/).** No login or account required.
-2. **Name your event.** Use something descriptive like `{{Your Name}} - CodeDay Labs Weekly Check-in` so mentees know exactly what it is.
+2. **Name your event.** Use something descriptive like `Your Name - CodeDay Labs Weekly Check-in` so mentees know exactly what it is.
 3. **Select candidate dates.** Click the dates you want to offer. For a recurring weekly meeting, choose the same days across 1-2 weeks (e.g. Mon-Fri of the upcoming two weeks).
 4. **Set the time range.** Use the **Earliest** and **Latest** dropdowns to set a daily window. A window of 9 AM - 7 PM captures most time zones.
 5. **Choose your time zone.** Select your local time zone. When2Meet will automatically display times in each respondent's own time zone when they fill it in.
