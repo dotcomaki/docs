@@ -155,7 +155,7 @@ Broadly, most conversations with your interns should go as follows:
 
 **Intern:** “I can’t figure out [problem]”
 
-**Mentor: “**I don’t know the fix ¯\*(ツ)*/¯
+**Mentor: “**I don’t know the fix ¯\\\_(ツ)_/¯
   here are the steps I would take to figure it out, though!”
 
 While this is best for CodeDay Labs interns, they often expect their mentor to be a subject matter expert, giving direct answers to any question asked. If your interns get hung up on a specific technical detail, bug, or question, encourage them to schedule a CSE session.
