@@ -1,0 +1,49 @@
+{% assign meta = site.data.page_metadata[page.path] %}
+{% if meta %}
+<div class="page-meta">
+  {% if meta.authors and meta.authors.size > 0 %}
+  <span class="page-meta-item">
+    {% if meta.authors.size > 1 %}Authors:{% else %}Author:{% endif %}
+    {% for author in meta.authors %}
+      {% if author.login %}
+        <a href="https://github.com/{{ author.login }}" target="_blank" rel="noopener">{{ author.name | default: author.login }}</a>
+      {% else %}
+        {{ author.name }}
+      {% endif %}
+      {% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </span>
+  {% endif %}
+  {% if meta.last_modified_date %}
+  <span class="page-meta-item">
+    Last modified {{ meta.last_modified_date | date: "%b %-d, %Y" }}
+    {% if meta.last_modified_by %}
+      by
+      {% if meta.last_modified_by.login %}
+        <a href="https://github.com/{{ meta.last_modified_by.login }}" target="_blank" rel="noopener">{{ meta.last_modified_by.name | default: meta.last_modified_by.login }}</a>
+      {% else %}
+        {{ meta.last_modified_by.name }}
+      {% endif %}
+    {% endif %}
+  </span>
+  {% endif %}
+</div>
+{% endif %}
+
+<style>
+.page-meta {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: inherit;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+}
+.page-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+</style>
